@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .container
+      h1 Add a New Album
+      form(method='POST' action='/update-cobj')
+        label(for='name') Name
+        input(type='text' name='name' id='name' required)
+        label(for='artist') Artist
+        input(type='text' name='artist' id='artist' required)
+        label(for='year') Year
+        input(type='text' name='year' id='year' required)
+        button.button(type='submit') Submit
+      a(href='/') Return to the homepage

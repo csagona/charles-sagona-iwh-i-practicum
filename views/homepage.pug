@@ -1,0 +1,24 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .container
+      h1 Custom Object Table
+      a.button(href='/update-cobj') Add to this table
+      table
+        thead
+          tr
+            th Name
+            th Artist
+            th Year
+        tbody
+          if records && records.length
+            each record in records
+              tr
+                td= record.properties.name
+                td= record.properties.artist
+                td= record.properties.year
+          else
+            tr
+              td(colspan='3') No records found yet.
